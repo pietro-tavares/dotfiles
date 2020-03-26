@@ -6,3 +6,9 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # My aliases
 alias vim='nvim'
 alias tmux='export TERM=tmux-256color; tmux -2'
+
+alias kube='microk8s.kubectl'
+complete -F __start_kubectl kube
+
+alias kb='microk8s.kubectl'
+complete -F __start_kubectl kube
