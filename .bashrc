@@ -86,19 +86,24 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Golang
+export GOPATH="/home/liv3w1re/Code/go"
+export PATH="$PATH:$GOPATH/bin"
+# export GOPATH="/usr/local/go"
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Pip
-export PATH=/home/liv3w1re/.local/bin:$PATH
+export PATH=/home/$USER/.local/bin:$PATH
 
 # Nim
-export PATH=/home/user/.nimble/bin:$PATH
+export PATH=/home/$USER/.nimble/bin:$PATH
 
 # Ghidra
-export PATH=/home/user/Apps/ghidra_9.1_PUBLIC/bin:$PATH
+export PATH=/home/$USER/Apps/ghidra_9.1_PUBLIC/bin:$PATH
 
 # Cargo
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -124,3 +129,4 @@ fi
 if [ -f ~/.bash_prompt ]; then
     source ~/.bash_prompt
 fi
+source <(kubectl completion bash)
